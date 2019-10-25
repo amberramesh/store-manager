@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.dsms.app.ViewProducts">
+   <children>
+      <TitledPane animated="false" collapsible="false" text="View Products">
+        <content>
+          <AnchorPane>
+               <children>
+                  <TableView fx:id="table" layoutX="-1.0" prefHeight="429.0" prefWidth="1286.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <columns>
+                      <TableColumn fx:id="colSKU" prefWidth="163.00000607967377" text="SKU" />
+                      <TableColumn fx:id="colProdName" prefWidth="373.0" text="Product Name" />
+                        <TableColumn fx:id="colVariant" prefWidth="223.0" text="Variant" />
+                        <TableColumn fx:id="colQtyInStock" prefWidth="194.0" text="Qty in Stock" />
+                        <TableColumn fx:id="colDepartment" prefWidth="149.0" text="Department" />
+                        <TableColumn fx:id="colProductType" prefWidth="183.0" text="Product Type" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+        </content>
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TitledPane>
+      <AnchorPane prefHeight="80.0" prefWidth="900.0">
+         <children>
+            <Button fx:id="hideVariants" layoutX="510.0" layoutY="21.0" mnemonicParsing="false" onAction="#hideVariantsTable" text="Hide Variants">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="showVariants" layoutX="693.0" layoutY="21.0" mnemonicParsing="false" onAction="#showVariantsTable" text="Show Variants">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>
